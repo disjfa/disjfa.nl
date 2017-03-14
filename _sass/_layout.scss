@@ -1,0 +1,29 @@
+html {
+  margin: 0;
+  padding: 0;
+  background: $color-clouds;
+}
+
+body {
+  font-family: $font-family-default;
+  font-size: $font-size;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: $font-size * 2;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: $font-size * 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  padding: 0 0 1rem;
+  margin: 0;
+}

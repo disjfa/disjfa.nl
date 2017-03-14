@@ -1,0 +1,245 @@
+---
+---
+
+@import "variables";
+@import "layout";
+
+header {
+  background: $color-peter-river;
+  color: $color-clouds;
+  padding: 10vmin;
+  box-shadow: 0 0 15px #666;
+  h1 {
+    text-align: center;
+  }
+}
+
+article {
+  border-style: solid;
+  border-color: $color-emerald;
+  border-width: 0 4px 7px 4px;
+  border-radius: 0 0 7px 7px;
+  padding: 2vmin;
+  margin: 5vmin;
+  transition: 0.3s all;
+  position: relative;
+  z-index: 100;
+  background: lighten($color-clouds, 5%);
+  box-shadow: 0 0 4px #aaa;
+
+  .read-more {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #000;
+    text-decoration: none;
+    background: $color-emerald;
+    &:hover {
+      background-color: lighten($color-emerald, 10%);
+    }
+
+    &:before {
+      content: "\00BB\ ";
+    }
+  }
+
+  .block {
+    background: $color-emerald;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -1px;
+    right: 0;
+    transition: 1s all;
+  }
+
+  h2 {
+    position: relative;
+    @media (min-width: 992px) {
+      padding: 20px;
+    }
+    .icon {
+      background: $color-emerald;
+      border-radius: 50%;
+      display: inline-block;
+      width: 1.5em;
+      height: 1.5em;
+      text-align: center;
+      border: 1px solid $color-clouds;
+      transition: .5s all;
+      .fa {
+        transition: .5s all;
+        color: $color-clouds
+      }
+    }
+  }
+
+  .more {
+    position: absolute;
+    box-shadow: 0 0 15px #000;
+    border-radius: 2px;
+    background: white;
+    text-align: left;
+    width: 85%;
+    transition: 0.3s all;
+    opacity: 0;
+    margin-top: 2vmin;
+    z-index: 150;
+    pointer-events: none;
+    padding: 1rem;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: 0 10px 15px #aaa;
+    .block {
+      right: 0;
+    }
+    .more {
+      pointer-events: auto;
+      opacity: 1;
+    }
+    .icon {
+      background: $color-clouds;
+      border-color: $color-emerald;
+      .fa {
+        color: $color-emerald;
+      }
+    }
+  }
+
+  &:nth-child(odd) {
+
+    @media (min-width: 992px) {
+      border-right-width: 0;
+      text-align: left;
+      margin-left: 45%;
+      .icon {
+        left: 0;
+        position: absolute;
+        transform: translate(-1.5em, 0);
+      }
+    }
+    .block {
+      right: 100%;
+      left: -1px;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      transform: scale(1.05) rotate(2deg);
+      .block {
+        right: 0;
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    @media (min-width: 992px) {
+      border-left-width: 0;
+      text-align: right;
+      margin-right: 45%;
+      .icon {
+        right: 0;
+        position: absolute;
+        transform: translate(1.5em, 0);
+      }
+    }
+    .block {
+      left: 100%;
+      right: -1px;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      transform: scale(1.05) rotate(-2deg);
+      .block {
+        left: 0;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 1rem 1rem 10rem 1rem;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+article:nth-child(1) {
+  z-index: 99;
+  border-color: $color-orange;
+  .block {
+    background-color: $color-orange;
+  }
+  .read-more {
+    background-color: $color-orange;
+    &:hover {
+      background-color: lighten($color-orange, 10%);
+    }
+  }
+}
+
+article:nth-child(2) {
+  z-index: 98;
+  border-color: $color-pumpkin;
+  .block {
+    background-color: $color-pumpkin;
+  }
+  .read-more {
+    background-color: $color-pumpkin;
+    &:hover {
+      background-color: lighten($color-pumpkin, 10%);
+    }
+  }
+}
+
+article:nth-child(3) {
+  z-index: 97;
+  border-color: $color-green-sea;
+  .block {
+    background-color: $color-green-sea;
+  }
+  .read-more {
+    background-color: $color-green-sea;
+    &:hover {
+      background-color: lighten($color-green-sea, 10%);
+    }
+  }
+}
+
+article:nth-child(4) {
+  z-index: 96;
+  border-color: $color-wisteria;
+  .block {
+    background-color: $color-wisteria;
+  }
+  .read-more {
+    background-color: $color-wisteria;
+    &:hover {
+      background-color: lighten($color-wisteria, 10%);
+    }
+  }
+}
+
+article:nth-child(5) {
+  z-index: 95;
+  border-color: $color-asbestos;
+  .block {
+    background-color: $color-asbestos;
+  }
+  .read-more {
+    background-color: $color-asbestos;
+    &:hover {
+      background-color: lighten($color-asbestos, 10%);
+    }
+  }
+}
+
+article:nth-child(6) {
+  z-index: 94;
+}
