@@ -1,0 +1,26 @@
+{
+  "name": "disjfa.nl",
+  "version": "0.1.0",
+  "description": "Homepage",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "ryoko-headers": "^0.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/disjfa/disjfa.nl.git"
+  },
+  "author": "disjfa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/disjfa/disjfa.nl/issues"
+  },
+  "homepage": "https://github.com/disjfa/disjfa.nl#readme"
+}

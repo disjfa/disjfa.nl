@@ -3,16 +3,7 @@
 
 @import "variables";
 @import "layout";
-
-header {
-  background: $color-peter-river;
-  color: $color-clouds;
-  padding: 10vmin;
-  box-shadow: 0 0 15px #666;
-  h1 {
-    text-align: center;
-  }
-}
+@import "ryoko-headers/ryoko";
 
 .container {
   max-width: 1170px;
@@ -36,7 +27,7 @@ article {
   .read-more {
     display: inline-block;
     padding: 5px 10px;
-    color: #000;
+    color: #FFF;
     text-decoration: none;
     background: $color-emerald;
     &:hover {
@@ -55,7 +46,7 @@ article {
     left: 0;
     bottom: -1px;
     right: 0;
-    transition: 1s all;
+    transition: .5s all;
   }
 
   h2 {
@@ -176,6 +167,15 @@ footer {
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+.about {
+  padding: 1rem;
+  font-size: 1rem;
+  background: #fbfbfb;
+  @media (min-width: 992px) {
+    border-radius: .5rem;
   }
 }
 
