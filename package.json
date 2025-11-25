@@ -1,26 +1,30 @@
 {
-  "name": "disjfa.nl",
-  "version": "0.1.0",
-  "description": "Homepage",
-  "main": "index.js",
-  "dependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-clean": "^1.1.0",
-    "grunt-contrib-copy": "^1.0.0",
-    "ryoko-headers": "^0.1.2"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/disjfa/disjfa.nl.git"
-  },
-  "author": "disjfa",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/disjfa/disjfa.nl/issues"
-  },
-  "homepage": "https://github.com/disjfa/disjfa.nl#readme"
+    "name": "disjfa.nl",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "deploy": "npm-run-all prod:eleventy gh-pages",
+        "dev": "eleventy --serve --watch",
+        "format": "prettier . --write",
+        "gh-pages": "gh-pages -d _dist",
+        "pre-commit": "npm run format && npm run sort-package-json",
+        "prod:eleventy": "ELEVENTY_ENV=production eleventy",
+        "sort-package-json": "sort-package-json"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/disjfa/disjfa.nl.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/disjfa/disjfa.nl/issues"
+    },
+    "homepage": "https://github.com/disjfa/disjfa.nl#readme",
+    "dependencies": {
+        "@11ty/eleventy": "^3.1.2",
+        "favicons": "^7.2.0"
+    }
 }
